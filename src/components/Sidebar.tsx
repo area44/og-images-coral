@@ -1,10 +1,16 @@
 import { Button } from "@/components/ui/button";
 
 import BlogTemplate from "../template/blog";
+import EarthTemplate from "../template/earth";
 import MinimalTemplate from "../template/minimal";
 import PortfolioTemplate from "../template/portfolio";
 
 export const TEMPLATES = {
+  earth: {
+    id: "earth",
+    name: "Earth Template",
+    component: EarthTemplate,
+  },
   blog: {
     id: "blog",
     name: "Blog Template",
