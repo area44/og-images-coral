@@ -5,18 +5,22 @@
   <!-- Ambient glowing gradient in the top-right -->
   <defs>
     <radialGradient id="ambient-glow" cx="80%" cy="20%" r="60%">
-      <stop offset="0%" stop-color="#f43f5e" stop-opacity="0.15" />
+      <stop offset="0%" stop-color="#bd34fe" stop-opacity="0.25" />
       <stop offset="100%" stop-color="#09090b" stop-opacity="0" />
     </radialGradient>
-    <linearGradient id="coral-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#ff7f50" />
-      <stop offset="50%" stop-color="#f43f5e" />
-      <stop offset="100%" stop-color="#e11d48" />
-    </linearGradient>
     <linearGradient id="text-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#ff7f50" />
-      <stop offset="40%" stop-color="#fb923c" />
-      <stop offset="100%" stop-color="#f43f5e" />
+      <stop offset="0%" stop-color="#41d1ff" />
+      <stop offset="50%" stop-color="#bd34fe" />
+      <stop offset="100%" stop-color="#ffa800" />
+    </linearGradient>
+    <linearGradient id="og-vite-a" x1="-0.828%" x2="57.636%" y1="7.652%" y2="78.411%">
+      <stop offset="0%" stop-color="#41D1FF" />
+      <stop offset="100%" stop-color="#BD34FE" />
+    </linearGradient>
+    <linearGradient id="og-vite-b" x1="43.376%" x2="50.316%" y1="2.242%" y2="89.03%">
+      <stop offset="0%" stop-color="#FFEA83" />
+      <stop offset="8.333%" stop-color="#FFDD35" />
+      <stop offset="100%" stop-color="#FFA800" />
     </linearGradient>
     <filter id="glow">
       <feGaussianBlur stdDeviation="15" result="coloredBlur"/>
@@ -40,34 +44,23 @@
   <rect x="22" y="22" width="1156" height="586" rx="18" fill="none" stroke="#27272a" stroke-width="1" />
 
   <!-- Top-left glowing accent -->
-  <circle cx="100" cy="100" r="150" fill="#ff7f50" opacity="0.05" filter="url(#glow)" />
+  <circle cx="100" cy="100" r="150" fill="#bd34fe" opacity="0.1" filter="url(#glow)" />
 
-  <!-- New Logo Icon Group (Modern Isometric Overlapping Cards with Flame) -->
+  <!-- Logo Icon Group -->
   <g transform="translate(100, 150)">
-    <!-- Ambient glow inside logo -->
-    <circle cx="40" cy="40" r="36" fill="url(#coral-gradient)" opacity="0.3" filter="url(#glow)" />
+    <!-- Ambient glow behind logo -->
+    <circle cx="48" cy="48" r="45" fill="#bd34fe" opacity="0.3" filter="url(#glow)" />
 
-    <!-- Backing Card -->
-    <rect x="12" y="16" width="48" height="32" rx="6" fill="#18181b" stroke="#27272a" stroke-width="1.5" transform="rotate(-6 40 40)" opacity="0.8" />
-
-    <!-- Foreground Card -->
-    <rect x="15" y="18" width="48" height="32" rx="6" fill="#09090b" stroke="url(#coral-gradient)" stroke-width="1.8" />
-
-    <!-- Grid lines inside Card -->
-    <line x1="22" y1="25" x2="52" y2="25" stroke="#27272a" stroke-width="1.8" stroke-linecap="round" />
-    <line x1="22" y1="31" x2="41" y2="31" stroke="#18181b" stroke-width="1.8" stroke-linecap="round" />
-
-    <!-- Flame Badge -->
-    <g transform="translate(42, 30)">
-      <circle cx="13" cy="13" r="12" fill="url(#coral-gradient)" />
-      <path d="M13 6C13 6 15 10 15 13C15 16 12.5 18 10 18C7.5 18 5.5 16 5.5 13C5.5 10 9 7 9 7" stroke="#ffffff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" fill="none" transform="translate(1, 0.5)" />
-      <path d="M13 11.5C13 11.5 14.5 15 14.5 17C14.5 19 12.5 20.5 10.5 20.5" stroke="#ffffff" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" fill="none" transform="translate(1, 0.5)" />
+    <!-- Scaled Vite SVG logo -->
+    <g transform="scale(0.375)">
+      <path fill="url(#og-vite-a)" d="M255.153 37.938L134.897 252.976c-2.483 4.44-8.862 4.466-11.382.048L.875 37.958c-2.746-4.814 1.371-10.646 6.827-9.67l120.385 21.517a6.537 6.537 0 0 0 2.322-.004l117.867-21.483c5.438-.991 9.574 4.796 6.877 9.62Z"/>
+      <path fill="url(#og-vite-b)" d="M185.432 13.808l-132.3 24.116c-2.583.47-4.257 3.003-3.75 5.581l14.86 75.393c.47 2.388 2.651 4.084 5.08 3.931l29.882-1.882c2.784-.175 4.805 2.488 4.083 5.182l-10.4 38.8c-.808 3.018 2.15 5.64 5.068 4.757l27.172-8.219c2.732-.826 5.343 1.517 4.722 4.258l-10.222 45.162c-.933 4.12 4.32 6.82 7.025 3.621l65.867-77.822c2.083-2.463.308-6.26-2.91-6.236l-31.127.235c-2.716.02-4.757-2.433-4.103-5.071l13.116-52.909c.677-2.731-1.423-5.267-4.225-5.022l-23.82 2.082c-2.753.24-4.823-2.39-4.137-5.06l12.57-48.91c.712-2.771-1.464-5.385-4.301-4.87z"/>
     </g>
   </g>
 
   <!-- Brand Text -->
-  <text x="210" y="205" font-family="system-ui, -apple-system, sans-serif" font-weight="900" font-size="28" fill="#ff7f50" letter-spacing="4">AREA44</text>
-  <text x="210" y="240" font-family="system-ui, -apple-system, sans-serif" font-weight="400" font-size="16" fill="#a1a1aa" letter-spacing="2">OPEN GRAPH PLAYGROUND</text>
+  <text x="220" y="195" font-family="system-ui, -apple-system, sans-serif" font-weight="900" font-size="28" fill="#bd34fe" letter-spacing="4">AREA44</text>
+  <text x="220" y="230" font-family="system-ui, -apple-system, sans-serif" font-weight="400" font-size="16" fill="#a1a1aa" letter-spacing="2">OPEN GRAPH PLAYGROUND</text>
 
   <!-- Large Title -->
   <text x="100" y="380" font-family="system-ui, -apple-system, sans-serif" font-weight="800" font-size="80" fill="url(#text-gradient)" letter-spacing="-2">OG Images Coral</text>
@@ -79,15 +72,15 @@
   <g transform="translate(100, 510)">
     <!-- Tag 1 -->
     <rect x="0" y="0" width="160" height="38" rx="10" fill="#18181b" stroke="#27272a" stroke-width="1" />
-    <text x="80" y="24" font-family="system-ui, -apple-system, sans-serif" font-weight="700" font-size="13" fill="#fb923c" text-anchor="middle">SATORI ENGINE</text>
+    <text x="80" y="24" font-family="system-ui, -apple-system, sans-serif" font-weight="700" font-size="13" fill="#41d1ff" text-anchor="middle">SATORI ENGINE</text>
 
     <!-- Tag 2 -->
     <rect x="175" y="0" width="160" height="38" rx="10" fill="#18181b" stroke="#27272a" stroke-width="1" />
-    <text x="255" y="24" font-family="system-ui, -apple-system, sans-serif" font-weight="700" font-size="13" fill="#f43f5e" text-anchor="middle">TAILWIND CSS</text>
+    <text x="255" y="24" font-family="system-ui, -apple-system, sans-serif" font-weight="700" font-size="13" fill="#bd34fe" text-anchor="middle">TAILWIND CSS</text>
 
     <!-- Tag 3 -->
     <rect x="350" y="0" width="160" height="38" rx="10" fill="#18181b" stroke="#27272a" stroke-width="1" />
-    <text x="430" y="24" font-family="system-ui, -apple-system, sans-serif" font-weight="700" font-size="13" fill="#a1a1aa" text-anchor="middle">REACT 19 &amp; VITE 8</text>
+    <text x="430" y="24" font-family="system-ui, -apple-system, sans-serif" font-weight="700" font-size="13" fill="#ffa800" text-anchor="middle">REACT 19 &amp; VITE 8</text>
   </g>
 
   <!-- Live Status Pulse Badge -->
